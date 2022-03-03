@@ -49,6 +49,13 @@ function Index() {
 
           dispatch(GlobalActions.setGlobalData([...globalData, updatedData]));
           setOpenModel(false);
+          setState((prevState) => ({
+            ...prevState,
+            name: "",
+            company: "",
+            status: "active",
+            notes: "",
+          }));
         }}
       >
         <form>
